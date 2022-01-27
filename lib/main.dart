@@ -1,5 +1,11 @@
 import './game.dart';
+import 'package:flame/game.dart';
+import 'package:flutter/material.dart';
 
 void main() {
-  var game = new RPGGame();
+  runApp(
+    GameWidget(
+      game: RPGGame(),
+    ),
+  );
 }

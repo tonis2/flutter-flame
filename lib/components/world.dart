@@ -1,30 +1,21 @@
 import 'package:flame/components.dart';
-import 'package:flame/sprite.dart';
+import '../game.dart';
+import 'dart:ui';
 
 class World extends SpriteComponent with HasGameRef {
-  late final Sprite grass;
-  late final Sprite sign;
-  late final Sprite chair;
+  late Rect bgRect;
+  final RPGGame game;
 
-  @override
-  Future<void>? onLoad() async {
-    final spriteSheet = SpriteSheet(
-      image: await gameRef.images.load('assets/images/roguelikeSheet_transparent.png'),
-      srcSize: Vector2(16.0, 16.0),
-    );
-
-    grass = spriteSheet.getSprite(1, 6);
-    sign = spriteSheet.getSprite(1, 19);
-    chair = spriteSheet.getSprite(3, 22);
-
-    // final composition = ImageComposition()
-    // ..add(image1, Vector2(0, 0))
-    // ..add(image2, Vector2(64, 0));
-    // ..add(image3,
-    //   Vector2(128, 0),
-    //   source: Rect.fromLTWH(32, 32, 64, 64),
+  World(this.game) {
+    // bgRect = Rect.fromLTWH(
+    //   0,
+    //   game.screenSize.height - (game.tileSize * 23),
+    //   game.tileSize * 9,
+    //   game.tileSize * 23,
     // );
-
-    // Image image = await composition.compose();
   }
+
+  void render(Canvas c) {}
+
+  void update(double t) {}
 }

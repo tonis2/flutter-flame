@@ -61,3 +61,4 @@ flutter:
   assets:
   - assets/images/roguelikeSheet_transparent.png
   - assets/images/roguelikeSheet_magenta.png
+  - assets/images/player.png
